@@ -11,10 +11,10 @@ robco_trajectory_controller:
         - drive4_joint
         - drive5_joint
     gains:
-        drive0_joint: {p: 0.025, d: 0, i: 0.005, i_clamp: 100}
-        drive1_joint: {p: 0.025, d: 0, i: 0.005, i_clamp: 100}
-        drive2_joint: {p: 0.025, d: 0, i: 0.005, i_clamp: 100}
-        drive3_joint: {p: 0.025, d: 0, i: 0.005, i_clamp: 100}
-        drive4_joint: {p: 0.025, d: 0, i: 0.005, i_clamp: 100}
-        drive5_joint: {p: 0.025, d: 0, i: 0.005, i_clamp: 100}
+        drive0_joint: {p: 0.03, d: 0, i: 0.005, i_clamp: 100}
+        drive1_joint: {p: 0.03, d: 0, i: 0.005, i_clamp: 100}
+        drive2_joint: {p: 0.03, d: 0, i: 0.005, i_clamp: 100}
+        drive3_joint: {p: 0.03, d: 0, i: 0.005, i_clamp: 100}
+        drive4_joint: {p: 0.03, d: 0, i: 0.005, i_clamp: 100}
+        drive5_joint: {p: 0.03, d: 0, i: 0.005, i_clamp: 100}
     state_publish_rate: 50
