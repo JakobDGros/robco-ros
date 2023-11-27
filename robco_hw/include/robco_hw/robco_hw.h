@@ -7,7 +7,9 @@
 #include <array>
 #include <curl/curl.h>
 #include <robcomm/robcomm.hpp>
-#include <list>
+#include <vector>
+
+#define ROBCO_HW_LOGNAME "robco_hw"
 
 const int ROBCO_MAX_JOINTS = 12; // Currently, a maximum of 12 joints are supported
 
@@ -17,8 +19,7 @@ class RobcoHW : public hardware_interface::RobotHW
         /**
          * @brief Initialize a new hardware interface.
          * 
-         * @param joint_names Array of joint name strings, up to ROBCO_MAX_JOINTS entries.
-         *                    Unused joints at the end can be left blank ("").
+         * @param robot Instance of librobcomm robot object to use for communication.
          */
         RobcoHW(robcomm::Robot& robot);
         ~RobcoHW();
@@ -50,10 +51,10 @@ class RobcoHW : public hardware_interface::RobotHW
         hardware_interface::VelocityJointInterface jnt_vel_interface;
 
         int num_joints;
-        std::list<double> cmd;
-        std::list<double> q;
-        std::list<double> dq;
-        std::list<double> eff;
+        std::vector<double> cmd;
+        std::vector<double> q;
+        std::vector<double> dq;
+        std::vector<double> eff;
 };
 
 #endif // ROBCO_HW_H
